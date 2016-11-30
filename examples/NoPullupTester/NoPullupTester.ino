@@ -1,5 +1,5 @@
-#include <OneWire.h>
-#include <DallasTemperature.h>
+#include "OneWire.h"
+#include "DS18B20.h"
 
 // This is an updated version of the Tester program that comes with the DallasTemp library
 // It will drive a DS18x20 tempurature sensor plugged directly to the Arduino header pins 8,9, and 10.
@@ -15,11 +15,8 @@
 // supports the busFail() method to diagnose bus problems
 // #define BUSFAIL 
 
-// Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
-OneWire oneWire(ONE_WIRE_BUS);
-
 // Pass our oneWire reference to Dallas Temperature. 
-DallasTemperature sensors(&oneWire);
+DS18B20 sensors(ONE_WIRE_BUS);
 
 void setup(void)
 {

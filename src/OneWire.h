@@ -1,13 +1,14 @@
 #ifndef OneWire_h
 #define OneWire_h
+#define ONEWIRE_VERSION "ONEWIRE 1.1.0"
 
 #include <inttypes.h>
 
 #if ARDUINO >= 100
-#include "Arduino.h"       // for delayMicroseconds, digitalPinToBitMask, etc
+#include "Arduino.h"       // for delayMicroseconds, digitalPinToBitMask, etc.
 #else
 #include "WProgram.h"      // for delayMicroseconds
-#include "pins_arduino.h"  // for digitalPinToBitMask, etc
+#include "pins_arduino.h"  // for digitalPinToBitMask, etc.
 #endif
 
 // You can exclude certain features from OneWire.  In theory, this
